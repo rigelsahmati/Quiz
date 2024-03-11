@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6781a33ba9.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title>Quiz Game</title>
+</head>
+
+<body>
+    <div class="scorediv" id="scorediv">
+        <h1 id="score">Score: </h1>
+        <h2 id="scorenr">0</h2>
+    </div>
+    <div class="container">
+        <div class="welcome-page" id="welcomepage">
+            <h2 id="h2-text">Hi Welcome to </h2>
+            <h1 id="h1-text">Quiz Game</h1>
+            <button onclick="topage2()" id="startgame">Next
+                <i class="fa-solid fa-arrow-right" id="button-icon"></i>
+            </button>
+        </div>
+        <div class="page2" id="page2">
+            <h2>Choose your settings</h2>
+            <form onsubmit="return false;">
+                <div class="opt1">
+                    <label for="form">Select Category</label>
+                    <select id="selectbox">
+                        <option value="">Any</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="21">Sports</option>
+                        <option value="21">Sports</option>
+                        <option value="21">Sports</option>
+                        <option value="23">History</option>
+                        <option value="25">Art</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                    </select>
+                </div>
+                <div class="opt2">
+                    <label for="difficulty">Select difficulty</label>
+                    <select id="difficulty">
+                        <option value="">Random</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="submit">
+                    <i class="fa-solid fa-forward fa-2xl" id="arro1"></i>
+                    <button type="submit" id="startnow" onclick="topage3()">Start Now</button>
+                    <i class="fa-solid fa-backward fa-2xl" id="arro2"></i>
+
+                </div>
+            </form>
+        </div>
+        <div class="gamediv" id="gamediv">
+            <div class="visiblediv" id="visiblediv">
+                <button id="back-btn" onclick="goback()"><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="questionheader">
+                    <h1>Question <h1 id="questnr">1</h1>
+                    </h1>
+                </div>
+                <div class="question">
+                    <h1 id="question"></h1>
+                </div>
+                <div class="category">
+                    <h4>Category: <br>
+                        <h4 id="category"></h4>
+                    </h4>
+                </div>
+                <div class="choise">
+                    <form onsubmit="return false;" class="gamesubmit">
+                        <button type="submit" value="true" class="submitquest"
+                            onclick="answer_submited_true()">True</button>
+                        <button type="submit" value="false" class="submitquest"
+                            onclick="answer_submited_false()">False</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p id="answer" style="display:none;">1</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

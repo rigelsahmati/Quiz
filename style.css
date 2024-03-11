@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Comfortaa:wght@500&family=Concert+One&family=Courgette&family=Martian+Mono&family=Prata&family=Space+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(62deg, #8ed9fc, #9b85b0, #f3ba9f, #d67095);
+    background-size: 400%, 400%;
+    animation: animate 20s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {}
+}
+
+.container{
+    width: 70vw;
+    height: 35vw;
+    background-color: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    padding: 2vw;
+}
+.welcome-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#h2-text{
+    font-size: 2vw;
+}
+#h1-text{
+    margin-top: 5vw;
+    font-size: 5vw;
+    color: #da5454;
+}
+button{
+    width: 10vw;
+    height: 4vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1vw 2vw;
+    font-weight: 700;
+    background: #5853db;
+    background-size: 400%, 400%;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5vw;
+    transition: all 0.4s;
+    justify-content: center;
+}
+#button-icon{
+    margin-left: 1vw;
+    animation: anime1 1.5s ease infinite;
+}
+.page2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 2vw;
+    background-color: #5853db;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+.page2 h2{
+    font-size: 3vw;
+    color: white;
+    margin: 2vw 0;
+}
+form{
+    display: flex;
+    margin-top: 5vw;
+}
+select {
+    width: 20vw;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #5853db;
+    border-radius: 20px;
+    height: 3vw;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 2vw;
+}
+label{
+    font-size: 2vw;
+    color: white;
+}
+.opt1, .opt2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opt2{
+    margin-left: 5vw;
+}
+#startnow{
+    background-color: white;
+    color: #5853db;
+    width: fit-content;
+    bottom: 0 !important;
+    position: static !important;
+    margin: 0 2vw;    
+}
+#startnow:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid white;
+    background-color: #5853db;
+    color: white;
+}
+.submit{
+    position: absolute;
+    bottom: 3vw;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#arro1{
+    color: white;
+    animation: anime1 1s ease infinite;
+
+}
+@keyframes anime1{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+#arro2{
+    color: white;
+    animation: anime2 1s ease infinite;
+}
+
+@keyframes anime2{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.option{
+    margin: 1vw 2vw;
+}
+.questionheader{
+    display: flex;
+    padding: 0 2vw;
+}
+.gamediv{
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    border-radius: 20px;
+    left: 0;
+    top: 0;
+    transition: all 0.3s;
+    width: 0;
+    /*width: 100%;*/
+   
+}
+.visiblediv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+#questnr{
+    margin-left: 1vw;
+    text-align: center;
+}
+.question{
+    margin-top: 5vw;
+    text-align: center;
+}
+.category{
+    position: absolute;
+    left: 2vw;
+    bottom: 10vw;
+}
+.choise{
+    position: absolute;
+    bottom: 0vw;
+    display: flex;
+}
+.gamesubmit{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 3vw;
+}
+.submitquest{
+    position: static !important;
+    bottom: 0;
+    margin: 0 2vw;
+    width: fit-content;
+    transition: all 0.3s;
+}
+.submitquest:hover{
+    background-color: #6f6be9;
+}
+#back-btn{
+    background-color: transparent !important;
+    color: #6f6be9;
+    top: 0;
+    left: 1vw;
+    width: fit-content;
+}
+.scorediv{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    color: rgba(255, 255, 255, 0.792);
+    display: flex;
+    align-items: baseline;
+    height: 5vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#scorenr{
+    margin-left: 2vw;
+    color: white;
+    
+}
+
+@media screen and (min-width : 580px) and (max-width : 767px) {
+    #h1-text{
+    font-size: 7vw !important;
+    }
+    .category {
+        bottom: 15vw !important;
+    }
+    h1#question {
+        font-size: 4vw !important;
+    }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:767px) {
+
+    .container{
+        width: 90vw;
+        height: 70vh;
+    }
+    #h2-text{
+        margin-top: 10vw;
+        font-size: 7vw;
+    }
+    #h1-text{
+        text-align: center;
+        font-size: 14vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+        
+    
+    .page2{
+            justify-content: center;
+    }
+    #startgame, button{
+        font-size: 5vw;
+        width: 30vw ;
+        height: 10vw ;
+        padding: 2vw 3vw;
+    }
+    #startnow{
+        width: 35vw;
+        margin: 0 7vw;  
+    }
+    .submit{
+        bottom: 6vw;
+    }
+    .page2 h2{
+        position: absolute;
+        top: 5vw;
+        font-size: 7vw;
+    }
+    select{
+        width: 38vw;
+        height: 8vw;
+        font-size: 5vw;
+        padding: 0 2vw;
+        margin-top: 5vw;
+    }
+    label {
+        font-size: 4vw;
+    }
+    .category {
+        left: 2vw;
+        bottom: 25vw;
+    }
+    .questionheader{
+        margin-top: 5vw;
+    }
+    .submitquest{
+        padding: 2vw 5vw;
+    }
+    h1#question {
+        font-size: 5vw;
+    }
+    .question{
+        position:absolute;
+        top: 40%;
+        transform: translateY(-40%);
+        padding: 0 3vw;
+    }
+
+
+
+}
